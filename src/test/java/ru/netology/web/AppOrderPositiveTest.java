@@ -39,9 +39,10 @@ public class AppOrderPositiveTest {
 
     @Test
     public void shouldTestV2() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys ("Смирнов Иван");
-        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79876543210");
-        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.get("http://0.0.0.0:7777");
+        driver.findElement(By.cssSelector("[data-test-id= 'name'] input")).sendKeys("Смирнов Иван");
+        driver.findElement(By.cssSelector("[data-test-id= 'phone'] input")).sendKeys("+79876543210");
+        driver.findElement(By.cssSelector("[data-test-id= 'agreement']")).click();
         driver.findElement(By.cssSelector("button.button")).click();
         WebElement actualElement= driver.findElement(By.cssSelector("data-test-id=order-success]"));
         String actualText = actualElement.getText().trim();
