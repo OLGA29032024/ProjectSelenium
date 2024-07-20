@@ -39,7 +39,7 @@ public class AppOrderPositiveTest {
 
     @Test
     public void shouldTestV2() {
-        driver.get("http://0.0.0.0:9999");
+        driver.get("http://localhost:9999");
         driver.findElement(By.cssSelector("[data-test-id= 'name'] input")).sendKeys("Смирнов Иван");
         driver.findElement(By.cssSelector("[data-test-id= 'phone'] input")).sendKeys("+79876543210");
         driver.findElement(By.cssSelector("[data-test-id= 'agreement']")).click();
